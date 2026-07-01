@@ -1,72 +1,109 @@
 
-#button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 5px 5px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    width: 80%;
-    height: 100%;
-
+:root {
+    color-scheme: light;
 }
 
-#button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
+* {
+    box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#button,
 #buttonCh {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 14px 16px;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
-    margin: 5px 5px;
+    display: block;
+    font-size: clamp(16px, 3vw, 25px);
+    margin: 8px auto;
     cursor: pointer;
-    transition-duration: 0.4s;
-    width: 20%;
-    height: 40%;
-
+    transition: all 0.3s ease;
+    width: min(320px, 100%);
+    border-radius: 8px;
 }
 
+#button:hover,
 #buttonCh:hover {
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
 }
 
+#buttonCh {
+    width: min(220px, 100%);
+    font-size: clamp(16px, 4vw, 20px);
+}
+
 #textCh {
     text-align: center;
-    font-size: 30px;
+    font-size: clamp(18px, 4vw, 30px);
     color: #4CAF50;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
 }
 
 h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: clamp(28px, 7vw, 60px);
     color: #4CAF50;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 12px 0 20px;
 }
-
 
 .audio {
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
+    width: 100%;
+    margin: 16px 0;
 }
 
-background {
-    background-color: #f2f2f2;
-    height: 100%;
-    width: 100%;
+.audio audio {
+    width: min(100%, 320px);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    #button,
+    #buttonCh {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+
+    #buttonCh {
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+
+    #textCh {
+        font-size: 20px;
+    }
+
+    .audio audio {
+        width: 100%;
+    }
 }
