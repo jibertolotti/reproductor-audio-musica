@@ -2,6 +2,7 @@
 
 Este proyecto es un reproductor web simple de audios musicales con una interfaz básica en HTML y CSS.
 
+
 ## Características
 - Menú principal con botones para cada personaje o escena.
 - Reproductor de audio incorporado para cada archivo MP3.
